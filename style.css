@@ -14,3 +14,180 @@ html {
 body {
   box-sizing: border-box;
 }
+
+.section__header {
+  width: 100vw;
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+#sidebarmenu {
+  height: 100%;
+  position: fixed;
+  left: 0;
+  width: 25%;
+  margin-top: 20px;
+  transform: translateX(-250px);
+  transition: transform 250ms ease-in-out;
+  background-color: rgba(1, 1, 1, 0.2);
+}
+
+#openSidebarMenu {
+  height: 100%;
+  width: 100%;
+}
+
+input[type="checkbox"]:checked ~ #sidebarmenu {
+  transform: translateX(0);
+}
+
+input[type="checkbox"] {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  display: none;
+}
+
+.sidebarIconToggle {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  top: 15px;
+  left: 10px;
+  height: 18px;
+  width: 18px;
+}
+.spinner {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #f44a25;
+}
+.horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+.diagonal.part-1 {
+  position: relative;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  float: left;
+}
+.diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(135deg);
+  margin-top: 8px;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+  margin-top: -9px;
+}
+
+.section__header-intro {
+  display: flex;
+  justify-content: space-between;
+  width: 95px;
+  align-items: center;
+}
+
+.header__logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  transform: rotate(35deg);
+  filter: invert(38%) sepia(33%) saturate(6497%) hue-rotate(349deg)
+    brightness(101%) contrast(92%);
+}
+
+.font-small {
+  font-size: 1.6rem;
+}
+
+.section__header-name {
+  font-weight: 500;
+}
+
+.nav__btn-container {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  align-items: center;
+}
+
+.header__icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  filter: invert(14%) sepia(8%) saturate(17%) hue-rotate(56deg) brightness(102%)
+    contrast(84%);
+}
+
+.btn {
+  border: none;
+  background-color: #f44a25;
+  color: #fff;
+  border-radius: 1.5rem;
+  text-transform: uppercase;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn__nav:hover {
+  background-color: #ad0000;
+}
+
+.navigation__sidebar--list {
+  padding: 1.3rem 1rem;
+}
+
+.navigation__items-side {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.navigation__items-side:not(:last-child) {
+  border-bottom: 1px solid #f44a25;
+  padding-bottom: 1.3rem;
+}
+
+.navigation__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.navigation__items-side:first-child a {
+  color: #f44a25 !important;
+}
+
+.navigation__nav {
+  display: none;
+}
