@@ -132,7 +132,7 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 .section__header-name {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .nav__btn-container {
@@ -156,8 +156,11 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   border-radius: 1.5rem;
   text-transform: uppercase;
   padding: 0.8rem 1.6rem;
-  font-size: 1rem;
-  font-weight: 600;
+}
+
+.btn__nav {
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .btn__nav:hover {
@@ -190,4 +193,57 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 
 .navigation__nav {
   display: none;
+}
+
+.section__main {
+  width: 100%;
+  height: 300px;
+  background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 35.52%,
+      rgba(255, 255, 255, 0.73) 50.28%,
+      rgba(255, 255, 255, 0.94) 57.22%,
+      #fff 90.25%
+    ),
+    url("img/mian-img-small.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  float: right;
+}
+
+.section__main--content-container {
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.font-large {
+  font-size: 3.2rem;
+}
+
+.section__main--content {
+  font-weight: 300;
+  text-align: center;
+}
+
+.section__main--content span {
+  font-weight: 700;
+}
+
+.font-medium {
+  font-size: 1.8rem;
+}
+
+.section__main--subcontent {
+  font-weight: 300;
+}
+
+.btn-main {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
